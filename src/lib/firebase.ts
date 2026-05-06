@@ -1,9 +1,12 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
-import firebaseConfig from '../../firebase-applet-config.json';
+
+const firebaseConfig = {
+  // لێرە زانیارییەکانی خۆت تێدایە، دەستکاری مەکە ئەگەر هەبوو
+};
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
-firebase.ts const db = getFirestore(app, firebaseConfig.firestoreDatabaseId);
+export const db = getFirestore(app);
 export const googleProvider = new GoogleAuthProvider();
